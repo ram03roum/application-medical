@@ -1,0 +1,76 @@
+/* Header.css */
+.header {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  color: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  /* position: sticky; */
+  /* width: 100%; */
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.header .max-w-7xl {
+  /* max-width: none; */
+  margin: 0 auto;
+}
+
+/* Animation de l'icône Activity (Pouls médical) */
+.header svg.lucide-activity {
+  color: #60a5fa;
+  filter: drop-shadow(0 0 8px rgba(96, 165, 250, 0.8));
+  animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Titre et texte */
+.header h1 {
+  font-family: 'Inter', system-ui, sans-serif;
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+.header p {
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+/* Bouton "Nouvel Appareil" ultra-moderne */
+.header button {
+  background: white;
+  color: #1e40af;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header button:hover {
+  background: #f8fafc;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+  color: #2563eb;
+}
+
+.header button:active {
+  transform: translateY(0);
+}
+
+/* Flexbox utilities au cas où Tailwind n'est pas chargé */
+.flex { display: flex; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.gap-3 { gap: 12px; }
+.gap-2 { gap: 8px; }

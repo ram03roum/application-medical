@@ -1,0 +1,71 @@
+/* StatCard.css */
+.stat-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
+
+.stat-info {
+  z-index: 2;
+}
+
+.stat-title {
+  color: #64748b;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+}
+
+/* Conteneur de l'icône avec fond coloré translucide */
+.stat-icon-wrapper {
+  padding: 12px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover .stat-icon-wrapper {
+  transform: rotate(-10deg) scale(1.1);
+}
+
+/* Variantes de couleurs */
+.stat-blue { --bg-soft: #eff6ff; --text-main: #1d4ed8; }
+.stat-green { --bg-soft: #f0fdf4; --text-main: #15803d; }
+.stat-yellow { --bg-soft: #fefce8; --text-main: #a16207; }
+.stat-red { --bg-soft: #fef2f2; --text-main: #b91c1c; }
+
+.stat-card.variant-color {
+  background-color: white;
+}
+
+.variant-color .stat-icon-wrapper {
+  background-color: var(--bg-soft);
+  color: var(--text-main);
+}
+
+.variant-color .stat-value {
+  color: #1e293b; /* On garde le chiffre sombre pour la lisibilité */
+}

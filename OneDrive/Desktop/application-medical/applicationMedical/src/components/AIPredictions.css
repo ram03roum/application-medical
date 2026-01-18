@@ -1,0 +1,77 @@
+.ai-header-card {
+  background: linear-gradient(135deg, #6b21a8 0%, #3b82f6 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Petit effet de particules en arrière-plan (facultatif mais stylé) */
+.ai-header-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  transform: rotate(15deg);
+}
+
+.prediction-card {
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 16px;
+}
+
+.prediction-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.1);
+  border-color: #d1d5db;
+}
+
+/* Style de la probabilité IA */
+.probability-display {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.probability-value {
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+/* Recommandation IA Box */
+.recommendation-box {
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 1rem;
+}
+
+.recommendation-urgent {
+  background: #fef2f2;
+  border: 1px solid #fee2e2;
+  color: #991b1b;
+}
+
+.recommendation-plan {
+  background: #fffbeb;
+  border: 1px solid #fef3c7;
+  color: #92400e;
+}
+
+/* Grid layout pour les infos techniques */
+.tech-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.tech-tag {
+  background: #f8fafc;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #f1f5f9;
+}
